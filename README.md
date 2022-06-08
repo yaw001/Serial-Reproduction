@@ -7,9 +7,10 @@ Working memory is a reconstructive process that requires integrating multiple hi
 ## Serial reproduction paradigm
 One participant recall an intial random seed in which 15 dots are randomly distributed across the display. The response was then passed down to a second participant for recall and the process repeats till a serial reproducion is formed.
 
-### Motor experiment: Subjects were simply asked to reproduce a pattern of dots which is available on the side of the response panel throughout the task.
+### Motor experiment: 
+Subjects were simply asked to reproduce a pattern of dots which is available on the side of the response panel throughout the task.
 
-#### Animation of the raw serial reproduction chains
+#### Animation of the raw serial reproduction chains:
 
 <p align="center">
   <img src="Animations/homogenous_motor.gif" width="500" align="middle">
