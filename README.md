@@ -34,4 +34,11 @@ Subjects were asked to reproduce a pattern of homogenous dots by recalling their
   <img src="Animations/color_memory.gif" width="500" align="middle">
 </p>
 
-##### Animations are generated using gganimate package. To recreate the animation, access the animation_creator.R in Animations directory.
+##### Note: Animations are generated using gganimate package. To recreate the animation, access the animation_creator.R in Animations directory.
+
+## Organization of the repository
+* **Exp_code**: A set of scripts used to set up the online experiments
+* **Data**: All the raw data
+* **Analyses**: Series of R scripts that can be run to reproduce the analyses and figures of the paper
+* **Figures**: All the figures in the paper
+* **Animations**: Animations of the raw data
