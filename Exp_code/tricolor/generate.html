@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/config.debug.js"></script>
+    <script src="js/stimuli.js"></script>
+
+    <div id='controls'>
+        expt: <input id="expt" type="text" value='practice'><br>
+        n: <input id="n" type="text" value='5'><br>
+        seed: <input id="seed" type="text" value=0 disabled=true><br>
+        nseed: <input id="nseed" type="text" value=5><br>
+        chain: <input id="chain" type="text" value=0 disabled=true><br>
+        nchain: <input id="nchain" type="text" value=5><br>
+        iter: <input id="iter" type="text" value=0  disabled=true><br>
+        <button id='go' onClick='generate();'>generate</button>
+    </div>
+
+    <div id='trial'>
+        <canvas id="myCanvas"  width="800" height="800"></canvas>
+        <textarea style="border:1px solid #000; width:100%; margin:10px 0; padding:3px;" id="stim-json"></textarea>       
+        <button id='go' onClick='writeNow();'>save</button> 
+    </div>
+
+
+    <script type="text/javascript">
+      var seed = 0;
+        var display = new Display(document.getElementById('myCanvas'));
+        display.getParams();
+
+        var trial = {seed: -1, chain: 0};
+        $('#expt').val(expt.name);
+        $('#n').val(expt.default.n);
+
+
+    function setFields(){
+            trial.expt = $('#expt').val();
+            expt.default.n = Number($('#n').val());
+            trial.seed = Number($('#seed').val());
+            trial.chain = Number($('#chain').val());
+            trial.iter = Number($('#iter').val());
+    }
+
+    	function step(){
+    		while(trial.chain < (Number($('#nchain').val())-1)){
+
+    			trial.chain++;
+    			console.log([trial.chain, Number($('#nchain').val()), trial.chain < Number($('#nchain').val())]);
+    			
+    			$('#chain').val(trial.chain);
+    			writeNow();
+    		}
+        if(trial.chain >= (Number($('#nchain').val())-1)){
+          if(trial.seed < (Number($('#nchain').val())-1)){
+
+              trial.seed++;
+              trial.chain = 0;
+              $('#seed').val(trial.seed);
+              $('#chain').val(trial.chain);
+              generate();
+          }
+
+        }
+    	}
+
+        function generate(){
+          setFields();
+            trial.stimuli = genStimuli(expt.default);
+            $('#stim-json').text(JSON.stringify(trial, null, 2));
+            display.draw(expt.default.environment);
+            trial.stimuli.forEach(display.draw, display);
+            writeNow();
+        }
+
+        function save(URL){
+            console.log('initiate server write');
+            $.ajax({
+                  dataType: 'json',
+                  type: 'POST',
+                  url: URL,
+                  data: { data: JSON.stringify(trial)},
+                  beforeSend: function(xhr){
+                      $('#go').prop("disabled",true);
+                    },
+                    success: function(data){
+                      console.log('success saving data!');
+                      $('#go').prop("disabled",false);
+                      console.log(data);
+                      step();
+                    },
+                    error:function(xhr, status, error){
+                      console.log('failure saving data');
+                      console.log(xhr.responseText);
+                      console.log(status);
+                      console.log(error);
+                    }
+                  });
+        }
+
+        function writeNow(){
+          save('submit.seed.php');
+        }
+    </script>
+</html>

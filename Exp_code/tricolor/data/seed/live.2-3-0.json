@@ -1,0 +1,203 @@
+{
+    "seed": 2,
+    "chain": 3,
+    "expt": "live",
+    "iter": 0,
+    "stimuli": [
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.057976195809576,
+                "y": -0.77040096404856
+            },
+            "radius": 0.03,
+            "color": "#4cbf40",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.21456924926201,
+                "y": 0.15401752504337
+            },
+            "radius": 0.03,
+            "color": "#404cbf",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.12919706157665,
+                "y": 0.60678850432052
+            },
+            "radius": 0.03,
+            "color": "#bf404d",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.12029137520118,
+                "y": 0.48393352277576
+            },
+            "radius": 0.03,
+            "color": "#4cbf40",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.5074249150593,
+                "y": 0.46457900809992
+            },
+            "radius": 0.03,
+            "color": "#404cbf",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.2701030597099,
+                "y": 0.11282679993468
+            },
+            "radius": 0.03,
+            "color": "#bf404d",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.24638949693268,
+                "y": 0.093420208178802
+            },
+            "radius": 0.03,
+            "color": "#4cbf40",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.075530862080764,
+                "y": -0.50474586637512
+            },
+            "radius": 0.03,
+            "color": "#404cbf",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.35967468856491,
+                "y": -0.090520079075389
+            },
+            "radius": 0.03,
+            "color": "#bf404d",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.70863704668195,
+                "y": 0.12588253348026
+            },
+            "radius": 0.03,
+            "color": "#4cbf40",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.020587276121113,
+                "y": -0.34645096437441
+            },
+            "radius": 0.03,
+            "color": "#404cbf",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.073566558548508,
+                "y": 0.84754299128423
+            },
+            "radius": 0.03,
+            "color": "#bf404d",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.65624640335842,
+                "y": 0.44779324767653
+            },
+            "radius": 0.03,
+            "color": "#4cbf40",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": 0.28362649027157,
+                "y": 0.86842083656934
+            },
+            "radius": 0.03,
+            "color": "#404cbf",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        },
+        {
+            "type": "circle",
+            "center": {
+                "x": -0.11561506194813,
+                "y": -0.29149328740351
+            },
+            "radius": 0.03,
+            "color": "#bf404d",
+            "border": {
+                "width": 0.005,
+                "color": "#000000"
+            }
+        }
+    ]
+}

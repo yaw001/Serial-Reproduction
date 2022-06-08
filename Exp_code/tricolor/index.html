@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/dataio.js"></script>
+    <script src="js/config.debug.js"></script>
+    <script src="js/expt.js"></script>
+    <script src="js/munkres.js"></script>
+
+    <div id="consent" class="mainText">        
+        <p class="mtitle">
+            <strong>Dot memory!</strong>
+        </p>
+
+        <p class="mdescription">
+            This HIT takes <strong>10-15 minutes</strong>.<br>
+            You will get a <strong>performance bonus of up to $0.50</strong>.
+        </p>
+        
+        <p class="mdescription">
+            You will do <strong>6 trials</strong>. <br><br>
+            In each trial you will see a display of colored dots, and will need to remember, and later report, their positions.
+        </p>
+        <p>
+            <img src="img/demo.png">
+        </p>
+        <p>
+            <button id="startButton" onClick="nextPhase();" disabled>Click to continue!</button>
+        </p>
+    </div>
+
+    <div id="loading" class="blockText">
+        <p>Loading trial...</p>
+    </div>
+
+    <div id="instructions" class="blockText">
+        <p>Memorize the display of dots.</p>
+        <p>Press <em>"Enter/Return"</em> to continue</p> 
+    </div>
+
+    <div id='trial' class="trialDiv" align="center">
+        <p id="score">Score: 0</p>
+        <canvas id="myCanvas"  width="600" height="600"></canvas>
+        <p id="subtitle"></p>
+    </div>
+
+
+    <div id="debugControls" class="mainText" style="display:none;">
+        <p>
+            <button onClick="fillResponses('uniform');">fill uniform</button><br>
+
+            <button onClick="fillResponses('center');">fill center</button><br>
+
+            <button onClick="fillResponses('perfect');">fill perfect</button>
+        </p>
+    </div>
+
+    <div id="done" class="blockText">
+        <p>You are all done, thanks!</p>
+        <p>Your bonus is <span id="bonusText"></span>!</p>
+        <p>Press <em>"Enter/Return"</em> to complete this assignment.</p> 
+    </div>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/stimuli.js"></script>
+    <script src="js/dataio.js"></script>
+
+    <div id='controls'>
+        expt: <input id="expt" type="text" value='iterated_prototype'><br>
+        seed: <input id="seed" type="text" value=0><br>
+        chain: <input id="chain" type="text" value=0><br>
+        iter: <input id="iter" type="text" value=0><br>
+        <button id='go' onClick='retrieve();'>retrieve</button>
+    </div>
+
+    <div id='trial'>
+        <canvas id="myCanvas"  width="800" height="800"></canvas>
+        <textarea style="border:1px solid #000; width:100%; margin:10px 0; padding:3px;" id="stim-json"></textarea>        
+    </div>
+
+
+    <div id='loading'>
+        LOADING!
+    </div>
+
+
+    <script type="text/javascript">
+        var stimuli = null;
+        var display = new Display(document.getElementById('myCanvas'));
+        display.getParams();
+
+        var trial = {sid: 'test', 
+        expt: 'test',
+        seed: 0, 
+        chain: 0 ,
+        state :{start: new Date()}
+    };
+
+    function setFields(){
+            trial.expt = $('#expt').val();
+            trial.seed = Number($('#seed').val());
+            trial.chain = Number($('#chain').val());
+            trial.iter = Number($('#iter').val());
+    }
+
+        function retrieve(){
+            setFields();
+          readServer(trial);
+        }
+
+        function genTrial(){
+
+        }
+
+        function startTrial(){
+            $('#stim-json').text(JSON.stringify(trial, null, 2));
+            display.draw(expt.default.environment);
+            trial.stimuli.forEach(display.draw, display);
+        }
+    </script>
+</html>
