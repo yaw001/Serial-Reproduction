@@ -6,13 +6,13 @@ Working memory is a reconstructive process that requires integrating multiple hi
 
 ## Organization of the repository
 * **Exp_code**: A set of scripts used to set up the online experiments
-* **Data**: All the raw data
+* **Data**: The raw data
 * **Analyses**: Series of R scripts that can be run to reproduce the analyses and figures of the paper
 * **Figures**: All the figures in the paper
 * **Animations**: Animations of the raw data
 
 ## Serial reproduction paradigm
-One participant recall an intial random seed in which 15 dots are randomly distributed across the display. The response was then passed down to a second participant for recall and the process repeats till a serial reproducion is formed.
+One participant recall an intial random seed in which 15 dots are randomly distributed across the display. The response was then passed down to a second participant for recall and the process repeats till a serial reproducion chain is formed.
 
 ### Motor experiment: 
 Subjects were simply asked to reproduce a pattern of homogenous dots which is available on the side of the response panel throughout the task.
