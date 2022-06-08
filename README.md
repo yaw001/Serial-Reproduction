@@ -17,7 +17,7 @@ One participant recall an intial random seed in which 15 dots are randomly distr
 ### Motor experiment: 
 Subjects were simply asked to reproduce a pattern of homogenous dots which is available on the side of the response panel throughout the task.
 
-#### The animation of the raw serial reproduction chains:
+#### The animation of the serial reproduction chains:
 
 <p align="center">
   <img src="Animations/homogenous_motor.gif" width="500" align="middle">
@@ -26,7 +26,7 @@ Subjects were simply asked to reproduce a pattern of homogenous dots which is av
 ### Memory experiment: 
 Subjects were asked to reproduce a pattern of homogenous dots by recalling their positions after 15-second exposure.
 
-#### The animation of the raw serial reproduction chains:
+#### The animation of the serial reproduction chains:
 
 <p align="center">
   <img src="Animations/homogenous_memory.gif" width="500" align="middle">
@@ -35,7 +35,7 @@ Subjects were asked to reproduce a pattern of homogenous dots by recalling their
 ### Tricolor memory experiment: 
 Subjects were asked to reproduce a pattern of homogenous dots by recalling their positions after 15-second exposure.
 
-#### The animation of the raw serial reproduction chains:
+#### The animation of the serial reproduction chains:
 
 <p align="center">
   <img src="Animations/color_memory.gif" width="500" align="middle">
