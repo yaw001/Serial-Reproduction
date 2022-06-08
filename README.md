@@ -8,3 +8,7 @@ Working memory is a reconstructive process that requires integrating multiple hi
 
 
 Motor experiment: Subjects were asked to reproduce a pattern of randomly distributed dots
+
+<p align="center">
+  <img src="Animations/homogenous_motor.gif" width="500" align="middle">
+</p>
