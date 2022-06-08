@@ -10,6 +10,7 @@ all.data = all.data_memory
 all.data$x = all.data$x/275
 all.data$y = all.data$y/275
 
+#Tidy data
 tb.result_memory<-all.data%>%
   group_by(Seed,Chain,Iter)%>% 
   do(tibble(xy = list(data.frame(x=.$x, y=.$y)),
@@ -20,6 +21,7 @@ tb.result_memory<-all.data%>%
          ratio = eigenval$values[1]/eigenval$values[2],
          proj.x = list(as.matrix(xy)%*%eigenval$vectors[,1]))
 
+#ggplot
 p <- all.data %>% 
   ggplot(aes(x=x, y=y))+
   facet_grid(Chain~Seed)+
@@ -33,40 +35,43 @@ p <- all.data %>%
         strip.text = element_blank(),
         legend.position = 'none')
 
+#Create animation
 p_anim = p + transition_states(states = Iter,
                                transition_length = 0,
                                state_length = 1)+
   labs(title = 'Iteration: {closest_state}')
 p_anim
 
-p_first <- all.data %>% filter(Iter==1) %>% 
-  ggplot(aes(x=x, y=y))+
-  facet_grid(Chain~Seed)+
-  geom_point(size=1)+
-  theme_bw()+
-  coord_cartesian(xlim=c(-1,1), ylim=c(-1,1))+
-  theme(axis.text = element_blank(),
-        panel.grid = element_blank(),
-        axis.title = element_blank(),
-        axis.ticks = element_blank(),
-        # strip.text = element_blank(),
-        legend.position = 'none')
+# p_first <- all.data %>% filter(Iter==1) %>% 
+#   ggplot(aes(x=x, y=y))+
+#   facet_grid(Chain~Seed)+
+#   geom_point(size=1)+
+#   theme_bw()+
+#   coord_cartesian(xlim=c(-1,1), ylim=c(-1,1))+
+#   theme(axis.text = element_blank(),
+#         panel.grid = element_blank(),
+#         axis.title = element_blank(),
+#         axis.ticks = element_blank(),
+#         # strip.text = element_blank(),
+#         legend.position = 'none')
+# 
+# p_last <- all.data %>% filter(Iter==20) %>% 
+#   ggplot(aes(x=x, y=y))+
+#   facet_grid(Chain~Seed)+
+#   geom_point(size=1)+
+#   theme_bw()+
+#   coord_cartesian(xlim=c(-1,1), ylim=c(-1,1))+
+#   theme(axis.text = element_blank(),
+#         panel.grid = element_blank(),
+#         axis.title = element_blank(),
+#         axis.ticks = element_blank(),
+#         strip.text = element_blank(),
+#         legend.position = 'none')
 
-p_last <- all.data %>% filter(Iter==20) %>% 
-  ggplot(aes(x=x, y=y))+
-  facet_grid(Chain~Seed)+
-  geom_point(size=1)+
-  theme_bw()+
-  coord_cartesian(xlim=c(-1,1), ylim=c(-1,1))+
-  theme(axis.text = element_blank(),
-        panel.grid = element_blank(),
-        axis.title = element_blank(),
-        axis.ticks = element_blank(),
-        strip.text = element_blank(),
-        legend.position = 'none')
-
+# Save the animation
 anim_save("homogenous_memory.gif", animate(p_anim, nframes = 100, fps = 5, duration = 20, end_pause = 20, rewind = FALSE))
 
+#For motor data
 load("all.data.Rdata")
 all.data$x = all.data$x/275
 all.data$y = all.data$y/275
@@ -101,6 +106,7 @@ p_motor_anim
 
 anim_save("homogenous_motor.gif", animate(p_motor_anim, nframes = 100, fps = 5, duration = 20, end_pause = 20, rewind = FALSE))
 
+#For tricolor data
 setwd('/Users/young/Desktop/UCSD/Research/VWM_Iterated_Learning/Colored_dots/Data')
 load('all.data_color.Rdata')
 all.data<-filter(all.data,iter<=25)
