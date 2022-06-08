@@ -28,6 +28,8 @@ Subjects were asked to reproduce a pattern of homogenous dots by recalling their
 ### Tricolor memory experiment: 
 Subjects were asked to reproduce a pattern of homogenous dots by recalling their positions after 15-second exposure.
 
+#### The animation of the raw serial reproduction chains:
+
 <p align="center">
   <img src="Animations/color_memory.gif" width="500" align="middle">
 </p>
