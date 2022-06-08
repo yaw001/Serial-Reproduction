@@ -34,4 +34,4 @@ Subjects were asked to reproduce a pattern of homogenous dots by recalling their
   <img src="Animations/color_memory.gif" width="500" align="middle">
 </p>
 
-##### Animations are generated using gganimate package. To recreate the animation, access the animation_creator.R in animation file.
+##### Animations are generated using gganimate package. To recreate the animation, access the animation_creator.R in Animations directory.
